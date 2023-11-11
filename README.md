@@ -4,5 +4,5 @@ An attempt at an esoteric language inspired by brainfuck
 # Usable symbols
 | Command | Description |
 | --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
+| + | Increment current referenced variable by 1 |
+| - | Decrement current referenced variable by 1 |
