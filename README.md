@@ -35,7 +35,7 @@ Example:
 
 
 # Loops
-Loops work relatively the same as they do in brainfuck. Wrapping `[]` or `()` around a loop changed the variable being compared to 0
+Loops work relatively the same as they do in brainfuck. Wrapping `[]` or `()` around a loop changes the variable being compared to 0
 
 Example:
 
@@ -54,7 +54,7 @@ However, it is still possible to change the variable that is being checked under
       after the interpreter passes the `[` the conditions then become (while c != 0)
 ```
 
-Note that wrapping `{}` around `[]` or `()` is NOT the same as wrapping `[]` or `()` around `{}`.
+## Note that wrapping `{}` around `[]` or `()` is NOT the same as wrapping `[]` or `()` around `{}`.
 Example:
 
 ```
@@ -71,7 +71,7 @@ I recommend using a as your loop variable because it produces (more) readable co
 
 Loops are very important to programming in 3lang, anything can be done with a loop.
 
-Program that prints out "HI"
+## Program that prints out "HI"
 ```
 +++++++++ set a to 9
 {(++++++++) [++++++++] -} [+]  increment b and c by 8 for every iteration of the loop this is done until both b and c are 72 after which c is incremented by 1
@@ -80,7 +80,7 @@ Program that prints out "HI"
 ({-[-](}) [-] set b and c to 0
 ```
 
-Porgram that checks `if(c != b)`
+## Program that checks `if(c != b)`
 ```
 (.) input for b
 [.] input for c
@@ -111,6 +111,7 @@ Porgram that checks `if(c != b)`
 ```
 
 # Notes
+## Using ] and )
 Because `]` and `)` do not check what the current variable being referenced is they can be used in combination with `[` and `(` without affecting the code's interpretation (though, I recommend not doing this for readability purposes)
 
 Example: 
@@ -126,3 +127,5 @@ and
 will yield the same results and won't return an error
 
 A `[` or `(` does not require a corresponding `]` or `)`. However, every `{` (loop start) requires a `}` to be interpreted without errors
+## Formatting code
+The interpreter ignores all tabs, spaces, and newlines. Because of this I recommend putting effort into formatting your code so it's easier to read
