@@ -48,8 +48,8 @@ Program that prints out "HI"
 
 ```
 +++++++++ set a to 9
- {(++++++++) [++++++++] -} [+]  incrment b and c by 8 for every iteration of the loop this is done until both b and c are 72 after which c is incremented by 1
-                                at the end of every iteration a is incremented by 1
+{(++++++++) [++++++++] -} [+]  increment b and c by 8 for every iteration of the loop this is done until both b and c are 72 after which c is incremented by 1
+                               at the end of every iteration a is incremented by 1
 (,) [,] print ascii values of b and c
 ({-[-](}) [-] set b and c to 0
 ```
