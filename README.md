@@ -37,4 +37,4 @@ and
 ```
 will yield the same results and won't return an error
 
-A `[` or `(` does not require a corresponding `]` or `)`. However, creating every `{` (loop start) requires a `}` to be interpreted without errors
+A `[` or `(` does not require a corresponding `]` or `)`. However, every `{` (loop start) requires a `}` to be interpreted without errors
