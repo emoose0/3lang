@@ -2,6 +2,7 @@
 An attempt at an esoteric language inspired by brainfuck
 
 # Usable symbols
-| Symbol | | Action Type |
-| ------ | | ----------- |
-|+| | Increment current referenced variable |
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
