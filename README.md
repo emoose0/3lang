@@ -62,7 +62,7 @@ Example:
 {[+]} is an infinite loop that increments c by 1 BUT the loop is the equivalent of (while a!= 0)
 ```
 
-I recommend using a as your loop variable because it produces (more) readable code compared to using `b` or `c`. Example:
+I recommend using `a` as your loop variable because it produces (more) readable code compared to using `b` or `c`. Example:
 ```
 {[+] (++) -} loop that increments c by 1 b by 2 and then decrements a
 
