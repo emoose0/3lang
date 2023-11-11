@@ -46,7 +46,7 @@ Example:
 [{+}] loop that increments c
 ```
 
-However, it is still possible to change the variable that is being checked under the loop's conditions while the loop is still running. Example:
+However, it is still possible to change which variable is being checked while the loop is still running. Example:
 
 ```
 {++[} loop that increments a by 2 and then sets the variable currently being referenced to c
