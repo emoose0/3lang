@@ -25,7 +25,7 @@ Using the interpreter is pretty simple, after building using `make`, you can int
 # Loops
 Loops work relatively the same as they do in brainfuck. Putting  a `[` or `(` will set the variable that's being checked under the loop's conditions.
 
-Example
+Example:
 
 ```
 {+} infinite loop that increments a
@@ -34,11 +34,24 @@ Example
 [{+}] loop that increments c
 ```
 
-However, it is still possible to change the variable that is being checked under the loop's conditions
+However, it is still possible to change the variable that is being checked under the loop's conditions. Example:
 
 ```
 {++[} loop that increments a by 2 and then sets the variable currently being referenced to c
-      while this loop's conditions start as (while a != 0), after the interpreter passes the `[` the conditions then become (while c != 0)
+      while this loop's conditions start as (while a != 0)
+      after the interpreter passes the `[` the conditions then become (while c != 0)
+```
+
+Loops are very important to programming in 3lang, anything can be done with a loop.
+
+Program that prints out "HI"
+
+```
++++++++++ set a to 9
+ {(++++++++) [++++++++] -} [+]  incrment b and c by 8 for every iteration of the loop this is done until both b and c are 72 after which c is incremented by 1
+                                at the end of every iteration a is incremented by 1
+(,) [,] print ascii values of b and c
+({-[-](}) [-] set b and c to 0
 ```
 
 # Notes
