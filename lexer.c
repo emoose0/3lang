@@ -117,11 +117,24 @@ RESULT tokenise(){
                     break;
                 }
             break;
+
+            case ';': //used for line comments
+                while(lex->c != '\n' || lex->c != '\0'){
+                    lexerAdvance();
+                    if(lex->c == '\n' || lex->code[lex->i+1] == '\0'){
+                        break;
+                    }
+                }
+            break;
         }
         lexerAdvance();
     }
     addToken(END);
     lex->tokens = realloc(lex->tokens, lex->count*(sizeof(token)));
+    if(lex->tokens == NULL){
+        fprintf(stderr, "ERR: NOT ENOUGH MEMORY TO ALLOCATE MORE TOKENS");
+        return -1;
+    }
 
     if(lex->LBRACECOUNT < lex->RBRACECOUNT){
         fprintf(stderr, "ERR: STRAY } FOUND WHEN TOKENISING");
