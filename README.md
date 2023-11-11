@@ -30,8 +30,8 @@ By default, the current referenced variable is `a`, you can change the variable 
 Example:
 ```
 +++ set a to 3
-(+++) set current referenced variable to b then add 3 to b and then set the current referenced variable to a again
-[+++] set current referenced variable to c then add 3 to c and then set the current referenced variable to a again
+(+++) ;set current referenced variable to b and add 3, then set the current referenced variable to a again 
+[+++] ;set current referenced variable to c and add 3, then set the current referenced variable to a again
 ```
 
 
@@ -51,23 +51,23 @@ However, it is still possible to change which variable is being checked while th
 
 ```
 {++[} loop that increments a by 2 and then sets the variable currently being referenced to c
-      while this loop's conditions start as (while a != 0)
-      after the interpreter passes the `[` the conditions then become (while c != 0)
+      this loop's conditions start as (while a != 0)
+      but after the interpreter passes the [ the conditions then become (while c != 0)
 ```
 
 ## Note that wrapping `{}` around `[]` or `()` is NOT the same as wrapping `[]` or `()` around `{}`.
 Example:
 
 ```
-[{+}] is an infinite loop that increments c by 1; additionally this loop is the equivalent of (while c!= 0)
-{[+]} is an infinite loop that increments c by 1 BUT the loop is the equivalent of (while a!= 0)
+[{+}] ;is an infinite loop that increments c by 1, this loop is the equivalent of (while c!= 0)
+{[+]} ;is an infinite loop that increments c by 1 BUT the loop is the equivalent of (while a!= 0)
 ```
 
 I recommend using `a` as your loop variable because it produces (more) readable code compared to using `b` or `c`. Example:
 ```
-{[+] (++) -} loop that increments c by 1 b by 2 and then decrements a
+{[+] (++) -} ;loop that increments c by 1, b by 2, and then decrements a
 
-({[+] ++ (-}) loop that increments c by 1 a by 2 and then decrements b
+({[+] ++ (-}) loop that increments c by 1, a by 2, and then decrements b
 ```
 
 Loops are very important to programming in 3lang, anything can be done with a loop.
@@ -75,7 +75,7 @@ Loops are very important to programming in 3lang, anything can be done with a lo
 ## Program that prints out "HI"
 ```
 +++++++++ set a to 9
-{(++++++++) [++++++++] -} [+]  increment b and c by 8 for every iteration of the loop this is done until both b and c are 72 after which c is incremented by 1
+{(++++++++) [++++++++] -} [+]  ;increment b and c by 8 for every iteration of the loop, this is done until both b and c are 72 after which c is incremented by 1
                                at the end of every iteration a is incremented by 1
 (,) [,] print ascii values of b and c
 ({-[-](}) [-] set b and c to 0
