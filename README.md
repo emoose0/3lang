@@ -2,7 +2,7 @@
 An attempt at an esoteric language inspired by brainfuck
 
 # About
-My first esoteric language, heavily inspired by brainfuck, the main difference is that while brainfuck gives you an unlimited amount of "cells", 3lang gives you 3 variables called a, b, and c (hence the name 3lang).
+My first esoteric language, heavily inspired by brainfuck, the main difference is that while brainfuck gives you an unlimited amount of "cells", 3lang gives you 3 variables called `a`, `b`, and `c` (hence the name 3lang).
 
 # Actions
 | Command | Usage |
