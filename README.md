@@ -9,22 +9,22 @@ My first esoteric language, heavily inspired by brainfuck, the main difference i
 | --- | --- |
 | + | Increment current referenced variable by 1 |
 | - | Decrement current referenced variable by 1 |
-| ( | Set current referenced variable to b |
-| [ | Set current referenced variable to c |
-| ) and ] | Set current referenced variable to a |
-| { | Start loop (while currentVariable != 0) |
+| ( | Set current referenced variable to `b` |
+| [ | Set current referenced variable to `c` |
+| ) and ] | Set current referenced variable to `a` |
+| { | Start loop `(while currentVariable != 0)` |
 | } | End loop |
 | . | Input |
 | , | Output ascii value of current referenced variable to stdout |
 
 Any character that is not part of the above actions will be ignored and treated as a comment
-By default a is referenced first
+By default `a` is referenced first
 
 # Interpreter
 Using the interpreter is pretty simple, after building using `make`, you can interpret a file with a .3 extension by typing in `3l [file].3`. Additionally you have the option add a `-r` to the end of the arguments to print the final values of each token
 
 # Referencing variables
-By default, the current referenced variable is a, you can change the variable being currently referenced to b or c by wrapping actions inside `[]` and `()`
+By default, the current referenced variable is `a`, you can change the variable being currently referenced to b or c by wrapping actions inside `[]` and `()`
 
 Example:
 ```
@@ -62,7 +62,7 @@ Example:
 {[+]} is an infinite loop that increments c by 1 BUT the loop is the equivalent of (while a!= 0)
 ```
 
-I recommend using a as your loop variable because it produces (more) readable code compared to using b or c. Example:
+I recommend using a as your loop variable because it produces (more) readable code compared to using `b` or `c`. Example:
 ```
 {[+] (++) -} loop that increments c by 1 b by 2 and then decrements a
 
