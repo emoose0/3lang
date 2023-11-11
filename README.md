@@ -16,8 +16,9 @@ My first esoteric language, heavily inspired by brainfuck, the main difference i
 | } | End loop |
 | . | Input |
 | , | Output ascii value of current referenced variable to stdout |
+| ; | Single line comment |
 
-Any character that is not part of the above actions will be ignored and treated as a comment
+Any character that is not part of the actions above will be ignored and treated as a comment
 By default `a` is referenced first
 
 # Interpreter
