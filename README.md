@@ -129,3 +129,10 @@ will yield the same results and won't return an error
 A `[` or `(` does not require a corresponding `]` or `)`. However, every `{` (loop start) requires a `}` to be interpreted without errors
 ## Formatting code
 The interpreter ignores all tabs, spaces, and newlines. Because of this I recommend putting effort into formatting your code so it's easier to read
+[Take this if statement made in 3lang](https://github.com/emoose0/3lang/tree/main#program-that-checks-ifc--b).
+
+This is the same code without spaces, newlines, indents, or comments
+```
+(.)[.]({[-(-})+[{{-}]+++++++++++{[++++]-}[,{-}}]{+++++++++++{[++++]-}[+,{-}]{-}}
+```
+I will admit, the shortform version looks way cooler but reading it is a pain. For more complex programs formatting is very important
