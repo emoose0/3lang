@@ -21,7 +21,7 @@ Any character that is not part of the above actions will be ignored and treated 
 By default `a` is referenced first
 
 # Interpreter
-Using the interpreter is pretty simple, after building using `make`, you can interpret a file with a .3 extension by typing in `3l [file].3`. Additionally you have the option add a `-r` to the end of the arguments to print the final values of each token
+Using the interpreter is pretty simple, after building using `make`, you can interpret a file with a .3 extension by typing in `3l [file].3`. Additionally you have the option add a `-r` to the end of the arguments to print the final values of each variable
 
 # Referencing variables
 By default, the current referenced variable is `a`, you can change the variable being currently referenced to b or c by wrapping actions inside `[]` and `()`
