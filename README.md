@@ -22,6 +22,25 @@ Any character that is not part of the above actions will be ignored and treated 
 # Interpreter
 Using the interpreter is pretty simple, after building using `make`, you can interpret a file with a .3 extension by typing in `3l [file].3`. Additionally you have the option add a `-r` to the end of the arguments to print the final values of each token
 
+# Loops
+Loops work relatively the same as they do in brainfuck. Putting  a `[` or `(` will set the variable that's being checked under the loop's conditions.
+
+Example
+
+```
+{+} infinite loop that increments a
+```
+```
+[{+}] loop that increments c
+```
+
+However, it is still possible to change the variable that is being checked under the loop's conditions
+
+```
+{++[} loop that increments a by 2 and then sets the variable currently being referenced to c
+      while this loop's conditions start as (while a != 0), after the interpreter passes the `[` the conditions then become (while c != 0)
+```
+
 # Notes
 Because `]` and `)` do not check what the current variable being referenced is they can be used in combination with `[` and `(` without affecting the code's interpretation (though, I recommend not doing this for readability purposes)
 
