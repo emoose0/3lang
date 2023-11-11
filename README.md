@@ -16,3 +16,25 @@ My first esoteric language, heavily inspired by brainfuck, the main difference i
 | } | End loop |
 | . | Input |
 | , | Output ascii value of current referenced variable to stdout |
+
+Any character that is not part of the above actions will be ignored and treated as a comment
+
+# Interpreter
+Using the interpreter is pretty simple, after building using `make`, you can interpret a file with a .3 extension by typing in `3l [file].3`. Additionally you have the option add a `-r` to the end of the arguments to print the final values of each token
+
+# Notes
+Because `]` and `)` do not check what the current variable being referenced is they can be used in combination with `[` and `(` without affecting the code's interpretation (though, I recommend not doing this for readability purposes)
+
+Example: 
+```
+(++++) ++ set b to 4 and set a to 2
+```
+
+and
+
+```
+(++++] ++ set b to 4 and set a to 2
+```
+will yield the same results and won't return an error
+
+A `[` or `(` does not require a corresponding `]` or `)`. However, creating every `{` (loop start) requires a `}` to be interpreted without errors
